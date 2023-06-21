@@ -10,3 +10,28 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+.container{
+    display:flex;
+    flex-direction: column;
+    width: 200px;
+
+}
+
+.btn{
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin: auto;
+    /* box-shadow: 0 0 50px 15px #48abe0 */
+
+}
+.palo{
+    margin:auto;
+    height:150px;
+    width: 20px;
+}
+
+.selected{
+    box-shadow: 0 0 50px 15px #48abe0
+
+}
