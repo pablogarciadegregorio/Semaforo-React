@@ -43,6 +43,8 @@ const Home = () => {
 			// PARTE OPCIONAL DE CICLADO DE 
 			
 			function cicloColor(){
+
+			if (visibilidad === ("")){	
 				if (rojo === ("selectedRed")) {
 				   setAmarillo("selectedYellow");
 				   setRojo("");
@@ -75,17 +77,62 @@ const Home = () => {
 					setRojo("selectedRed");
 					setVerde("");
 					setMorado("");
-				  }
+				  }  
 			}
+
+			
+			if (visibilidad === ("botonOculto")){	
+				if (rojo === ("selectedRed")) {
+				   setAmarillo("selectedYellow");
+				   setRojo("");
+				   setVerde("");
+				   
+				 }
+
+				 if (amarillo === ("selectedYellow")) {
+					setAmarillo("");
+					setRojo("");
+					setVerde("selectedGreen");
+					
+				  }
+				  if (verde === ("selectedGreen")) {
+					setAmarillo("");
+					setRojo("selectedRed");
+					setVerde("");
+					
+				  }
+
+				
+				  if ((rojo === ("")) && (amarillo === ("")) && (verde === (""))){
+					setAmarillo("");
+					setRojo("selectedRed");
+					setVerde("");
+					
+				  }  
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+		}
 
 
 			// PARTE OPCIONAL DE GENERADOR DE NUEVA BOMBILLA
 
-			function nuevaBombilla(){
-				return (	
-					<button type="button" onClick={cambiarMorado} className={"morado btn   rounded-circle " + morado}></button>
+			const [visibilidad, setVisibilidad] = useState("botonOculto")
 
-				);
+			function nuevaBombilla(){
+					if (visibilidad === ("botonOculto")) {setVisibilidad("");	}
+					if (visibilidad === ("")) {setVisibilidad("botonOculto");	}					
 			}
 
 
@@ -99,7 +146,7 @@ const Home = () => {
 					<button type="button" onClick={cambiarRojo} className={"rojo btn btn-danger rounded-circle mb-3 " + rojo} ></button>
 					<button type="button" onClick={cambiarAmarillo} className={"amarillo btn btn-warning rounded-circle mb-3 " + amarillo}></button>
 					<button type="button" onClick={cambiarVerde} className={"verde btn btn-success rounded-circle mb-3 " + verde}></button>
-					{nuevaBombilla}
+					<button type="button" onClick={cambiarMorado} className={"morado btn   rounded-circle " + visibilidad + morado}></button>
 					
 				</div>
 				<div className="botones">

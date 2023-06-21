@@ -62,10 +62,15 @@
 .morado{
 
     background-color: #960c8a;
-
+    
 }
 
 .selectedPurple{
     box-shadow: 0 0 50px 15px #c216b4
 
 }
+
+.botonOculto{
+    display:none;
+}
+
