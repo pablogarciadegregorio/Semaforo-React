@@ -6,14 +6,13 @@ import rigoImage from "../../img/rigo-baby.jpg";
 //create your first component
 const Home = () => {
 
-	const [rojo, setRojo] = useState("btn-danger");
-	const [ramarillo, setAmarillo] = useState("btn-warning");
-	const [verde, setVerde] = useState("btn-green");
+	const [rojo, setRojo] = useState("");
+	// const [ramarillo, setAmarillo] = useState("btn-warning");
+	// const [verde, setVerde] = useState("btn-green");
 
 	function cambiarRojo(){
 		setRojo("selected");
-		setAmarillo("not-selected");
-		setVerde("not-selected");
+		
 	}
 
 
@@ -25,7 +24,7 @@ const Home = () => {
 				
 				
 				<div className="d-flex flex-column bg-dark rounded p-4 ">
-					<button type="button" className="rojo btn btn-danger rounded-circle mb-3 selected"></button>
+					<button type="button" onClick={cambiarRojo} className={"rojo btn btn-danger rounded-circle mb-3 " + rojo} ></button>
 					<button type="button" className="amarillo btn btn-warning rounded-circle mb-3"></button>
 					<button type="button" className="verde btn btn-success rounded-circle"></button>
 				</div>
