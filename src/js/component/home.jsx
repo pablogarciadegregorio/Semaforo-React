@@ -132,7 +132,9 @@ const Home = () => {
 
 			function nuevaBombilla(){
 					if (visibilidad === ("botonOculto")) {setVisibilidad("");	}
-					if (visibilidad === ("")) {setVisibilidad("botonOculto");	}					
+					if (visibilidad === ("")) {setVisibilidad("botonOculto");	
+											   setMorado("")
+											  }					
 			}
 
 
