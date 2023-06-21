@@ -146,7 +146,7 @@ const Home = () => {
 					<button type="button" onClick={cambiarRojo} className={"rojo btn btn-danger rounded-circle mb-3 " + rojo} ></button>
 					<button type="button" onClick={cambiarAmarillo} className={"amarillo btn btn-warning rounded-circle mb-3 " + amarillo}></button>
 					<button type="button" onClick={cambiarVerde} className={"verde btn btn-success rounded-circle mb-3 " + verde}></button>
-					<button type="button" onClick={cambiarMorado} className={"morado btn   rounded-circle " + visibilidad + morado}></button>
+					<button type="button" onClick={cambiarMorado} className={"morado btn   rounded-circle " + visibilidad + " " + morado}></button>
 					
 				</div>
 				<div className="botones">
