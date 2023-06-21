@@ -31,7 +31,17 @@
     width: 20px;
 }
 
-.selected{
-    box-shadow: 0 0 50px 15px #48abe0
+.selectedRed{
+    box-shadow: 0 0 50px 15px #ff0000
+
+}
+
+.selectedGreen{
+    box-shadow: 0 0 50px 15px #198f0e
+
+}
+
+.selectedYellow{
+    box-shadow: 0 0 50px 15px #ffd000
 
 }

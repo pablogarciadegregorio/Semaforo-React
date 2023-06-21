@@ -7,16 +7,27 @@ import rigoImage from "../../img/rigo-baby.jpg";
 const Home = () => {
 
 	const [rojo, setRojo] = useState("");
-	// const [ramarillo, setAmarillo] = useState("btn-warning");
-	// const [verde, setVerde] = useState("btn-green");
-
-	function cambiarRojo(){
-		setRojo("selected");
-		
-	}
+	const [amarillo, setAmarillo] = useState("");
+	const [verde, setVerde] = useState("");
 
 
-
+	
+			function cambiarRojo(){
+				setRojo("selectedRed");
+				setAmarillo("");
+				setVerde("");
+			};
+			function cambiarAmarillo(){
+				setAmarillo("selectedYellow");
+				setVerde("");
+				setRojo("");
+			}
+			function cambiarVerde(){
+				setVerde("selectedGreen");
+				setRojo("");
+				setAmarillo("");
+			}
+	
 	return (
 
 			<div className="container d-flex justify-content-center">
@@ -25,8 +36,8 @@ const Home = () => {
 				
 				<div className="d-flex flex-column bg-dark rounded p-4 ">
 					<button type="button" onClick={cambiarRojo} className={"rojo btn btn-danger rounded-circle mb-3 " + rojo} ></button>
-					<button type="button" className="amarillo btn btn-warning rounded-circle mb-3"></button>
-					<button type="button" className="verde btn btn-success rounded-circle"></button>
+					<button type="button" onClick={cambiarAmarillo} className={"amarillo btn btn-warning rounded-circle mb-3 " + amarillo}></button>
+					<button type="button" onClick={cambiarVerde} className={"verde btn btn-success rounded-circle " + verde}></button>
 				</div>
 			</div>
 	);
