@@ -28,8 +28,38 @@ const Home = () => {
 				setAmarillo("");
 			}
 	
-	return (
 
+			// PARTE OPCIONAL DE CICLADO DE 
+			
+			function cicloColor(){
+				if (rojo === ("selectedRed")) {
+				   setAmarillo("selectedYellow");
+				   setRojo("");
+				   setVerde("");
+				 }
+
+				 if (amarillo === ("selectedYellow")) {
+					setAmarillo("");
+					setRojo("");
+					setVerde("selectedGreen");
+				  }
+				  if (verde === ("selectedGreen")) {
+					setAmarillo("");
+					setRojo("selectedRed");
+					setVerde("");
+				  }
+
+				  if ((rojo === ("")) && (amarillo === ("")) && (verde === ("")) ){
+					setAmarillo("");
+					setRojo("selectedRed");
+					setVerde("");
+				  }
+			}
+
+
+
+	return (
+			<>
 			<div className="container d-flex justify-content-center">
 				<div className="palo bg-dark rounded-top "></div>
 				
@@ -39,7 +69,10 @@ const Home = () => {
 					<button type="button" onClick={cambiarAmarillo} className={"amarillo btn btn-warning rounded-circle mb-3 " + amarillo}></button>
 					<button type="button" onClick={cambiarVerde} className={"verde btn btn-success rounded-circle " + verde}></button>
 				</div>
+				<button type="button" onClick={cicloColor} className=" ciclo btn btn-white  mt-4"><i class="fa-solid fa-lightbulb"></i></button>
 			</div>
+			
+			</>
 	);
 };
 
